@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  airflow:
+    image: apache/airflow:2.9.1
+    container_name: airflow_local
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "True"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./jobs:/opt/airflow/jobs
+      - ./data:/opt/airflow/data
+      - ./config:/opt/airflow/config
+    ports:
+      - "8080:8080"
+    command: standalone

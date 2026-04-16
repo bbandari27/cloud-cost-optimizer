@@ -1,0 +1,6 @@
+resource_id,resource_type,usage_hours,cost,status,region
+i-123,EC2,720,120,running,us-east-1
+i-456,EC2,12,80,idle,us-east-1
+rds-1,RDS,720,210,running,us-west-2
+s3-1,S3,0,50,unused,us-east-1
+ebs-1,EBS,5,40,idle,us-east-2
